@@ -1,0 +1,145 @@
+html {
+    background-color: #121212;
+}
+
+html, body {
+    height: 100%;
+    margin: 5px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #F8F8F0;
+    color: #121212;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #121212;
+    font-size: 24px;
+    margin: 15px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #2F2F2F;
+    margin: 0;
+}
+
+header nav a {
+    color: #F8F8F0;
+    text-decoration: none;
+    width: 100%;
+    padding: 5px;
+    transition: background-color 0.25s ease, color 0.25s ease, font-weight 0.25s ease;
+}
+
+header nav a:hover {
+    color: #121212;
+    background-color: #F8F8F0;
+    font-weight: bold;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+}
+
+main p {
+    margin: 10px;
+}
+
+footer {
+    background-color: #F8F8F0;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    width: 100%;
+}
+
+footer p {
+    padding: 0;
+    margin: 0;
+}
+
+.name {
+    color: #00416A 
+}
+
+.card {
+    background-color: #2F2F2F;
+    color: #F8F8F0;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+}
+
+.card h1 {
+    color: #121212;
+    background-color: #F8F8F0;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    transition: background-color 0.25s ease;
+}
+
+.card img {
+    width: 150px;
+    height: auto;
+    border: 2px solid black;
+    margin: 10px;
+}
+
+.first-card {
+    grid-column: span 3;
+}
+
+.first-card:hover h1 {
+    background-color: #4682B4;
+}
+
+.about {
+    display: flex;
+}
+
+.second-card {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+
+.second-card:hover h1 {
+    background-color: #4682B4;
+}
+
+.second-card a {
+    color: #F8F8F0;
+    text-decoration: none;
+    width: 100%;
+    transition: color 0.25s ease;
+}
+
+.second-card a:hover {
+    color: #4682B4;
+}
+
+.lastmodified {
+    color: #00416A ;
+    font-size: 12px;
+    font-weight: bold;
+}
