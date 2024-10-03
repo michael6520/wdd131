@@ -1,4 +1,6 @@
 html {
+    display: flex;
+    justify-content: center;
     background-color: #121212;
 }
 
@@ -11,6 +13,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 1500px;
 }
 
 header {
@@ -84,10 +87,11 @@ footer p {
     border-radius: 6px;
 }
 
-.card h1 {
+.card h2 {
     color: #121212;
     background-color: #F8F8F0;
     text-align: center;
+    font-size: 22px;
     width: 100%;
     margin: 0;
     border-top-left-radius: 6px;
@@ -95,10 +99,13 @@ footer p {
     transition: background-color 0.25s ease;
 }
 
+.card p, .card li {
+    font-size: 18px;
+}
+
 .card img {
     width: 150px;
     height: auto;
-    border: 2px solid black;
     margin: 10px;
 }
 
@@ -106,8 +113,13 @@ footer p {
     grid-column: span 3;
 }
 
-.first-card:hover h1 {
+
+.first-card:hover h2 {
     background-color: #4682B4;
+}
+
+.first-card img {
+    border: 2px solid black;
 }
 
 .about {
@@ -118,12 +130,10 @@ footer p {
     grid-column: span 2;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
     margin-right: 20px;
 }
 
-.second-card:hover h1 {
+.second-card:hover h2 {
     background-color: #4682B4;
 }
 
@@ -136,6 +146,13 @@ footer p {
 
 .second-card a:hover {
     color: #4682B4;
+}
+
+.dew {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 .lastmodified {
