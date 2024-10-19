@@ -1,0 +1,143 @@
+:root {
+    --dagr: #121212;
+    --chgr: #333333;
+    --slgr: #4F4F4F;
+    --sigr: #B0B0B0;
+    --whsm: #F5F5F5;
+    --fogr: #2C5F2D;
+    --olgr: #708238;
+    --migr: #9ABF88;
+}
+
+html {
+    background-color: var(--dagr);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0;
+}
+
+header {
+    background-color: var(--fogr);
+    color: var(--dagr);
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+main {
+    width: 100%;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2px;;
+}
+
+div {
+    color: var(--chgr);
+    background-color: var(--migr);
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.hero {
+    background-color: transparent;
+}
+
+div h1 {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+footer {
+    background-color: var(--fogr);
+    color: var(--whsm);
+    text-align: center;
+    width: 100%;
+}
+
+.data-container {
+    display: flex;
+}
+
+.weather-icon {
+    width: 100px;
+}
+
+.label {
+    text-align: right;
+    padding: 10px;
+    flex: 1;
+}
+
+.data {
+    text-align: left;
+    padding: 10px;
+    flex: 1;
+}
+
+.lastmodified {
+    color: var(--sigr) ;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+
+    .weather::after {
+        content: " ⛅"
+    }
+    
+    div {
+        background-color: rgba(154, 191, 136, 0.5);
+        margin: 0;
+    }
+
+    div h1 {
+        background-color: rgba(154, 191, 136, 0.5);
+    }
+    
+    .hero {
+        position: relative;
+    }
+
+    .top-left {
+        position: absolute;
+        top: 20px;
+        left: 10px;
+        width: 350px;
+    }
+
+    .bottom-right {
+        position: absolute;
+        bottom: 30px;
+        right: 10px;
+        width: 300px;
+    }
+
+    h1 {
+        padding-top: 10px;
+    }
+
+    .weather-icon {
+        display: none;
+    }
+
+    .weather-emoji {
+        display: inline;
+    }
+}
