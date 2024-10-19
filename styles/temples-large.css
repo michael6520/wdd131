@@ -1,0 +1,20 @@
+@media not all and (max-width: 768px) {
+    #menu {
+        display: none;
+    }
+
+    header nav {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    header nav a {
+        display: block;
+        width: 100%
+    }
+
+    .figgrid {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+}

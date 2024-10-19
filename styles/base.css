@@ -1,5 +1,15 @@
+:root {
+    --dagr: #121212;
+    --gr: #2F2F2F;
+    --wh: #F8F8F0;
+    --dabl: #00416A;
+    --bl: #4682B4;
+}
+
 html {
-    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    background-color: var(--dagr);
 }
 
 html, body {
@@ -11,11 +21,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 1500px;
 }
 
 header {
-    background-color: #F8F8F0;
-    color: #121212;
+    background-color: var(--wh);
+    color: var(--dagr);
     font-family: 'Poppins', sans-serif;
     text-align: center;
     width: 100%;
@@ -23,7 +34,7 @@ header {
 }
 
 header h1 {
-    color: #121212;
+    color: var(--dagr);
     font-size: 24px;
     margin: 15px;
 }
@@ -31,12 +42,12 @@ header h1 {
 header nav {
     display: flex;
     justify-content: space-around;
-    background-color: #2F2F2F;
+    background-color: var(--gr);
     margin: 0;
 }
 
 header nav a {
-    color: #F8F8F0;
+    color: var(--wh);
     text-decoration: none;
     width: 100%;
     padding: 5px;
@@ -44,8 +55,8 @@ header nav a {
 }
 
 header nav a:hover {
-    color: #121212;
-    background-color: #F8F8F0;
+    color: var(--dagr);
+    background-color: var(--wh);
     font-weight: bold;
 }
 
@@ -61,7 +72,7 @@ main p {
 }
 
 footer {
-    background-color: #F8F8F0;
+    background-color: var(--wh);
     font-family: 'Poppins', sans-serif;
     text-align: center;
     width: 100%;
@@ -73,21 +84,22 @@ footer p {
 }
 
 .name {
-    color: #00416A 
+    color: var(--dabl) 
 }
 
 .card {
-    background-color: #2F2F2F;
-    color: #F8F8F0;
+    background-color: var(--gr);
+    color: var(--wh);
     margin-left: 20px;
     margin-bottom: 20px;
     border-radius: 6px;
 }
 
-.card h1 {
-    color: #121212;
-    background-color: #F8F8F0;
+.card h2 {
+    color: var(--dagr);
+    background-color: var(--wh);
     text-align: center;
+    font-size: 22px;
     width: 100%;
     margin: 0;
     border-top-left-radius: 6px;
@@ -95,10 +107,13 @@ footer p {
     transition: background-color 0.25s ease;
 }
 
+.card p, .card li {
+    font-size: 18px;
+}
+
 .card img {
     width: 150px;
     height: auto;
-    border: 2px solid black;
     margin: 10px;
 }
 
@@ -106,8 +121,13 @@ footer p {
     grid-column: span 3;
 }
 
-.first-card:hover h1 {
-    background-color: #4682B4;
+
+.first-card:hover h2 {
+    background-color: var(--bl);
+}
+
+.first-card img {
+    border: 2px solid black;
 }
 
 .about {
@@ -118,28 +138,33 @@ footer p {
     grid-column: span 2;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
     margin-right: 20px;
 }
 
-.second-card:hover h1 {
-    background-color: #4682B4;
+.second-card:hover h2 {
+    background-color: var(--bl);
 }
 
 .second-card a {
-    color: #F8F8F0;
+    color: var(--wh);
     text-decoration: none;
     width: 100%;
     transition: color 0.25s ease;
 }
 
 .second-card a:hover {
-    color: #4682B4;
+    color: var(--bl);
+}
+
+.dew {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 .lastmodified {
-    color: #00416A ;
+    color: var(--dabl) ;
     font-size: 12px;
     font-weight: bold;
 }
