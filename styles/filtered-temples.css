@@ -1,0 +1,161 @@
+:root {
+    --dagr: #121212;
+    --gr: #2F2F2F;
+    --wh: #F8F8F0;
+    --dabl: #00416A;
+    --bl: #4682B4;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+    background-color: var(--dagr);
+}
+
+html, body {
+    height: 100%;
+    margin: 5px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1500px;
+    width: 100%;
+}
+
+header {
+    background-color: var(--wh);
+    color: var(--dagr);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    position: relative;
+    color: var(--dagr);
+    font-size: 24px;
+    margin: 15px;
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--gr);
+}
+
+header nav a {
+    display: none;
+    color: var(--wh);
+    text-decoration: none;
+    padding: 5px;
+    transition: all 0.25s ease;
+}
+
+header nav a:hover {
+    color: var(--dagr);
+    background-color: var(--wh);
+    font-weight: bold;
+}
+
+#menu {
+	position: absolute;
+    font-size: 1.5rem;
+	border: 0;
+	background: none;
+	color: #000;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+}
+
+#menu::before {
+	content: "☰";
+}
+
+#menu.open::before {
+	content: "✖";
+}
+
+.open a {
+	display: block;
+}
+
+main {
+    max-width: 1500px;
+    width: 100%;
+}
+
+.figgrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, 1fr);
+    gap: 10px;
+}
+
+h2 {
+    color: var(--wh);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+}
+
+figure img {
+    width: 90%;
+    height: auto;
+    margin-top: 40px;
+    border-radius: 15px;
+}
+
+figcaption {
+    color: var(--wh);
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+footer {
+    background-color: var(--wh);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+footer p {
+    padding: 0;
+    margin: 0;
+}
+
+.lastmodified {
+    color: var(--dabl) ;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#temple-gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image-figure {
+    text-align: center;
+    width: calc(33.333% - 16px);
+}
+
+.image-figure p {
+    font-size: 16px;
+}
