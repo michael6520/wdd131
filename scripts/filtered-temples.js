@@ -97,7 +97,7 @@ const temples = [
   
 function renderImages(temples) {
 	const gallery = document.getElementById("temple-gallery");
-    gallery.innerHTML = ""; // Clear previous images
+    gallery.innerHTML = "";
 
     temples.forEach(temple => {
         const figure = document.createElement("figure");
@@ -134,6 +134,8 @@ function renderImages(temples) {
 }
 
 renderImages(temples);
+const title = document.getElementById("title");
+title.textContent = "Home"
 
 function filterImages(criteria, event) {
     event.preventDefault();
@@ -151,4 +153,7 @@ function filterImages(criteria, event) {
     }
 
     renderImages(filteredImages);
+
+	const title = document.getElementById("title");
+	title.textContent = criteria.charAt(0).toUpperCase() + criteria.slice(1);
 }
