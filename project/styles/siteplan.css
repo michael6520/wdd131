@@ -1,0 +1,20 @@
+:root {
+    --dagr: #121212;
+    --gr: #2F2F2F;
+    --wh: #DFDFD5;
+}
+
+html {
+    background-color: var(--dagr);
+    color: var(--wh);
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
