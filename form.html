@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Michael Miller">
+    <meta name="description" content="WDD 131 Dynamic Web Fundamentals Form">
+    <title>Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <main>
+        <form method="get" action="review.html">
+            <label for="productName">Product Name</label>
+            <select id="productName" name="productName" required>
+                <option value="" disabled selected>Select a Product ...</option>
+            </select>
+            
+            <fieldset class="rating">
+                <legend>Overall Rating:</legend>
+                <input type="radio" id="star5" name="rating" value="5" required>
+                <label for="star5">☆</label>
+                <input type="radio" id="star4" name="rating" value="4" required>
+                <label for="star4">☆</label>
+                <input type="radio" id="star3" name="rating" value="3" required>
+                <label for="star3">☆</label>
+                <input type="radio" id="star2" name="rating" value="2" required>
+                <label for="star2">☆</label>
+                <input type="radio" id="star1" name="rating" value="1" required>
+                <label for="star1">☆</label>
+            </fieldset>            
+    
+            <label for="installation-date">Date of Installation:</label>
+            <input type="date" id="installation-date" name="installation-date" required>
+    
+            <fieldset>
+                <legend>Useful Features (Check all that apply):</legend>
+                <div class="features">
+                    <input type="checkbox" id="feature1" name="features" value="Tasty">
+                    <label for="feature1">Tasty</label><br>
+                </div>
+                <div class="features">
+                    <input type="checkbox" id="feature2" name="features" value="Delectable">
+                    <label for="feature2">Delectable</label><br>                    
+                </div>
+                <div class="features">
+                    <input type="checkbox" id="feature3" name="features" value="Scrumptious">
+                    <label for="feature3">Scrumptious</label><br>                    
+                </div>
+                <div class="features">
+                    <input type="checkbox" id="feature4" name="features" value="Ambrosial">
+                    <label for="feature4">Ambrosial</label><br>                    
+                </div>
+            </fieldset>
+    
+            <label for="written-review">Written Review:</label>
+            <textarea id="written-review" name="review" rows="4" cols="50" placeholder="Write your review here..."></textarea>
+    
+            <label for="user-name">User Name (Optional):</label>
+            <input type="text" id="user-name" name="username">
+    
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+    <footer>
+        <p>&copy;<span id="current-year"></span> - Michael Miller - Utah</p>
+        <p id="last-modified" class="lastmodified"></p>
+    </footer>
+</body>
+</html>
