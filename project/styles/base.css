@@ -1,0 +1,222 @@
+:root {
+    --dagr: #121212;
+    --gr: #1E1E1E;
+    --wh: #DFDFDA;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dagr);
+    color: var(--wh);
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+h1, h2 {
+    color: var(--wh);
+}
+
+#set-list {
+    list-style-type: none;
+    padding: 0;
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+    gap: 20px; /* Space between cards */
+}
+
+/* Set card styling */
+.set-card {
+    background-color: #2b2b2b; /* Dark gray background */
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    overflow: hidden;
+    width: 100%; /* Full width of grid cell */
+    height: 230px; /* Fixed height to help with centering */
+    display: flex;
+    flex-direction: column; /* Stack image and title vertically */
+    align-items: center;
+    justify-content: center; /* Align items to the bottom */
+    position: relative; /* For precise positioning of title */
+}
+
+/* Link styling for the whole card to be clickable */
+.set-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+    width: 100%;
+}
+
+/* Set logo image */
+.set-logo {
+    width: auto; /* Adjust size as needed */
+    height: auto;
+    max-height: 70%;
+    padding-bottom: 10px;
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+/* Set title styling */
+.set-title {
+    font-size: 1em;
+    color: #FFF;
+    margin: 10px 0; /* Add some margin for spacing */
+    text-align: center; /* Center the title */
+    position: absolute;
+    bottom: 10px;
+}
+
+/* Hover effect on card */
+.set-card:hover {
+    background-color: #3d3d3d; /* Lighter gray on hover */
+    cursor: pointer;
+}
+
+.nav-large {
+    display: none;
+}
+
+.nav-mobile {
+    background-color: var(--gr);
+}
+
+.hamburger {
+    font-size: 2.2em;
+    padding: 5px;
+    background: none;
+    border: none;
+    color: var(--wh);
+    cursor: pointer;
+    display: block; /* Show only on mobile */
+}
+
+/* Navigation menu items - Hidden by default on mobile */
+.nav-menu {
+    list-style-type: none;
+    display: none;
+    flex-direction: column;
+    left: 0;
+    width: 100%;
+    background-color: var(--gr);
+    padding: 15px 0;
+    padding-top: 0;
+    margin-top: 0;
+    font-size: 20px;;
+}
+
+.nav-menu.open {
+    display: flex; /* Show menu when open */
+}
+
+.nav-menu li {
+    padding: 10px 20px;
+}
+
+.nav-menu li a {
+    color: var(--wh);
+    text-decoration: none;
+}
+
+#card-list {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Card styling */
+.card {
+    background-color: #2b2b2b; /* Slightly lighter gray */
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    overflow: hidden;
+    width: 100%; /* Full width of the grid cell */
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.card:hover {
+    background-color: #3d3d3d; /* Lighter gray on hover */
+}
+
+.card.selected, .card.selected:hover {
+    background-color: #4CAF50; /* Green background */
+}
+
+.card-image {
+    width: 100px;
+    height: auto;
+    padding-top: 20px;
+}
+
+.card-title {
+    font-size: 1em;
+    color: #FFF;
+    margin: 0;
+    text-align: center;
+    padding: 10px;
+}
+
+#collection-list {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+    gap: 20px;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        background-color: var(--gr);
+    }
+    
+    .nav-large {
+        display: flex;
+        width: 17%;
+    }
+    
+    nav a {
+        color: var(--wh);
+        text-decoration: none;
+        flex: 1;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    nav a:hover {
+        background-color: var(--wh);
+        color: var(--dagr);
+        transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    #set-list, #collection-list, #card-list {
+        grid-template-columns: repeat(6, 1fr); /* Six equal-width columns on larger screens */
+    }
+
+    .set-logo {
+        width: 70%;
+        height: auto;
+        
+    }
+}
